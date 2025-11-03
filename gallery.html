@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Gallery - SpaceTech Hub</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="../shared-effects.css">
+</head>
+<body>
+    <!-- Animated background canvas -->
+    <canvas id="starfield"></canvas>
+    
+    <!-- Glowing orbs for ambient lighting -->
+    <div class="glowing-orb glowing-orb-1"></div>
+    <div class="glowing-orb glowing-orb-2"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">SpaceTech Hub</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="launches.html" class="nav-link">Launches</a></li>
+                <li class="nav-item"><a href="technologies.html" class="nav-link">Technologies</a></li>
+                <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-header">
+            <h1>Space Gallery</h1>
+            <p>Breathtaking images from our universe captured by space telescopes and probes</p>
+        </section>
+
+        <section class="gallery-container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nasa">NASA</button>
+                <button class="filter-btn" data-filter="hubble">Hubble</button>
+                <button class="filter-btn" data-filter="jwst">JWST</button>
+                <button class="filter-btn" data-filter="iss">ISS</button>
+            </div>
+
+            <div class="image-grid">
+                <div class="gallery-item" data-category="nasa">
+                    <img src="https://placehold.co/600x400/0b0c10/66fcf1?text=NASA+Image+1" alt="NASA Image 1" class="gallery-image">
+                    <div class="image-info">
+                        <h3>Andromeda Galaxy</h3>
+                        <p>Captured by NASA's Hubble Space Telescope</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hubble">
+                    <img src="https://placehold.co/600x400/0b0c10/66fcf1?text=Hubble+Image+1" alt="Hubble Image 1" class="gallery-image">
+                    <div class="image-info">
+                        <h3>Pillars of Creation</h3>
+                        <p>Eagle Nebula captured by Hubble Telescope</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="jwst">
+                    <img src="https://placehold.co/600x400/0b0c10/66fcf1?text=JWST+Image+1" alt="JWST Image 1" class="gallery-image">
+                    <div class="image-info">
+                        <h3>Deep Field</h3>
+                        <p>Infrared view of distant galaxies by James Webb</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="iss">
+                    <img src="https://placehold.co/600x400/0b0c10/66fcf1?text=ISS+Image+1" alt="ISS Image 1" class="gallery-image">
+                    <div class="image-info">
+                        <h3>Earth from Orbit</h3>
+                        <p>View of Earth from the International Space Station</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nasa">
+                    <img src="https://placehold.co/600x400/0b0c10/66fcf1?text=NASA+Image+2" alt="NASA Image 2" class="gallery-image">
+                    <div class="image-info">
+                        <h3>Mars Surface</h3>
+                        <p>Photo taken by NASA's Perseverance Rover</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hubble">
+                    <img src="https://placehold.co/600x400/0b0c10/66fcf1?text=Hubble+Image+2" alt="Hubble Image 2" class="gallery-image">
+                    <div class="image-info">
+                        <h3>Whirlpool Galaxy</h3>
+                        <p>Spiral galaxy M51 captured by Hubble</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="jwst">
+                    <img src="https://placehold.co/600x400/0b0c10/66fcf1?text=JWST+Image+2" alt="JWST Image 2" class="gallery-image">
+                    <div class="image-info">
+                        <h3>Cartwheel Galaxy</h3>
+                        <p>Ring galaxy captured by James Webb Telescope</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="iss">
+                    <img src="https://placehold.co/600x400/0b0c10/66fcf1?text=ISS+Image+2" alt="ISS Image 2" class="gallery-image">
+                    <div class="image-info">
+                        <h3>Aurora Borealis</h3>
+                        <p>Northern lights from ISS vantage point</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Aurora gradient overlay near footer -->
+        <div class="aurora-overlay"></div>
+        <p>&copy; 2025 SpaceTech Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="../shared-effects.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

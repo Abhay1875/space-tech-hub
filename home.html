@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceTechHub</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="shared-effects.css">
+</head>
+<body>
+    <!-- Animated background canvas -->
+    <canvas id="starfield"></canvas>
+    
+    <!-- Glowing orbs for ambient lighting -->
+    <div class="glowing-orb glowing-orb-1"></div>
+    <div class="glowing-orb glowing-orb-2"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">SpaceTechHub</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="launches.html" class="nav-link">Launches</a></li>
+                <li class="nav-item"><a href="technologies.html" class="nav-link">Technologies</a></li>
+                <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Live News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-container">
+            <span class="ticker-label">LIVE:</span>
+            <div class="ticker-content">
+                <ul id="ticker-list">
+                    <li>SpaceX Falcon 9 successfully launches Starlink satellites</li>
+                    <li>NASA's James Webb Space Telescope captures new exoplanet images</li>
+                    <li>ESA announces plans for lunar habitat construction</li>
+                    <li>Blue Origin completes successful test flight of New Shepard</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="animated-title">SpaceTech Hub</h1>
+                <p class="tagline">Exploring Tomorrow's Space Technology</p>
+            </div>
+        </section>
+
+        <section class="latest-updates">
+            <h2>Latest Updates</h2>
+            <div id="news-preview" class="news-preview-container">
+                <!-- News previews will be loaded here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Aurora gradient overlay near footer -->
+        <div class="aurora-overlay"></div>
+        <p>&copy; 2025 SpaceTech Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="shared-effects.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

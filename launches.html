@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Launches - SpaceTech Hub</title>
+    <link rel="stylesheet" href="launches.css">
+    <link rel="stylesheet" href="../shared-effects.css">
+</head>
+<body>
+    <!-- Animated background canvas -->
+    <canvas id="starfield"></canvas>
+    
+    <!-- Glowing orbs for ambient lighting -->
+    <div class="glowing-orb glowing-orb-1"></div>
+    <div class="glowing-orb glowing-orb-2"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">SpaceTech Hub</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="launches.html" class="nav-link active">Launches</a></li>
+                <li class="nav-item"><a href="technologies.html" class="nav-link">Technologies</a></li>
+                <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="launches-header">
+            <h1>Upcoming Rocket Launches</h1>
+            <p>Track scheduled space missions and rocket launches from agencies worldwide</p>
+        </section>
+
+        <!-- Live Countdown Section -->
+        <section class="countdown-section">
+            <h2>Next Launch Countdown</h2>
+            <div id="countdown-container" class="countdown-container">
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <div id="next-launch-info" class="next-launch-info">
+                <p>Loading next launch information...</p>
+            </div>
+        </section>
+
+        <section class="launches-container">
+            <div class="controls">
+                <div class="filter-controls">
+                    <label for="agency-filter">Filter by Agency:</label>
+                    <select id="agency-filter" class="filter-select">
+                        <option value="all">All Agencies</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="sort-controls">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by" class="sort-select">
+                        <option value="date">Date</option>
+                        <option value="agency">Agency</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search launches..." class="search-input">
+                <button id="search-btn" class="search-btn">Search</button>
+            </div>
+            
+            <div class="table-container">
+                <table id="launches-table" class="launches-table">
+                    <thead>
+                        <tr>
+                            <th>Agency</th>
+                            <th>Vehicle</th>
+                            <th>Mission</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody id="launches-body">
+                        <!-- Launch data will be loaded here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Aurora gradient overlay near footer -->
+        <div class="aurora-overlay"></div>
+        <p>&copy; 2025 SpaceTech Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="../shared-effects.js"></script>
+    <script src="launches.js"></script>
+</body>
+</html>

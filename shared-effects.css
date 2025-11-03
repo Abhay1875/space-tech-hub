@@ -1,0 +1,169 @@
+/* Shared CSS for enhanced space-themed background effects */
+
+/* Glowing orbs for ambient lighting */
+.glowing-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    opacity: 0.3;
+    animation: float 25s infinite ease-in-out;
+    will-change: transform;
+}
+
+.glowing-orb-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(102, 252, 241, 0.8), transparent 70%);
+    top: 15%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.glowing-orb-2 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.6), transparent 70%);
+    bottom: 25%;
+    right: 20%;
+    animation-delay: -8s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, 20px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 30px) scale(0.9);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Aurora gradient near footer */
+.aurora-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 200, 200, 0.15) 0%,
+        rgba(100, 100, 255, 0.1) 50%,
+        transparent 100%
+    );
+    z-index: -1;
+    pointer-events: none;
+    will-change: transform;
+}
+
+/* Animated background canvas */
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    will-change: transform;
+}
+
+/* Gradient animation for backgrounds */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Parallax container for depth effects */
+.parallax-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.parallax-element {
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease;
+}
+
+/* Add cursor light trail effect */
+.cursor-trail {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(102, 252, 241, 0.6), transparent 70%);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, opacity 0.3s ease;
+    opacity: 0;
+    will-change: transform;
+}
+
+.cursor-trail.active {
+    opacity: 0.7;
+}
+
+/* Add line tracing effect */
+.line-trace {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #66fcf1, transparent);
+    transform-origin: left;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.line-trace.animate {
+    opacity: 1;
+    animation: lineTrace 1s ease-out;
+}
+
+@keyframes lineTrace {
+    0% {
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 0;
+    }
+}
+
+/* Page transition overlay */
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0b0c10, #1f2833);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+}
+
+.page-transition-overlay.active {
+    opacity: 1;
+}
+
+/* Enhanced animations for all interactive elements */
+.nav-link, .nav-brand, .btn, .card, .news-card, .tech-card, .research-card, .gallery-item, .launch-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform, box-shadow;
+}
+
+.nav-link:hover, .nav-brand:hover, .btn:hover, .card:hover, .news-card:hover, .tech-card:hover, 
+.research-card:hover, .gallery-item:hover, .launch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 252, 241, 0.4);
+}
