@@ -1,8 +1,38 @@
 {
   "version": 2,
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/news",
+      "dest": "/news.html"
+    },
+    {
+      "src": "/launches",
+      "dest": "/launches.html"
+    },
+    {
+      "src": "/technologies",
+      "dest": "/technologies.html"
+    },
+    {
+      "src": "/research",
+      "dest": "/research.html"
+    },
+    {
+      "src": "/gallery",
+      "dest": "/gallery.html"
+    },
+    {
+      "src": "/about",
+      "dest": "/about.html"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "/$1"
+    }
   ],
   "cleanUrls": true,
   "trailingSlash": false
