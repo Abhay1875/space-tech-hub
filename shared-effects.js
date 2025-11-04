@@ -427,21 +427,23 @@ function initPageTransitions() {
     document.body.appendChild(overlay);
     
     // Handle all internal links for smooth transitions
-    document.querySelectorAll('a[href^="./"], a[href^="../"], a[href^="/"]').forEach(link => {
+    document.querySelectorAll('a[href^="/"]').forEach(link => {
         link.addEventListener('click', function(e) {
             // Don't interfere with anchor links or external links
             const href = this.getAttribute('href');
             if (href.startsWith('#') || href.startsWith('http')) return;
             
+            // Allow browser to handle navigation naturally for Vercel routing
+            // Just add a visual transition effect
             e.preventDefault();
             
             // Show transition overlay
             overlay.classList.add('active');
             
-            // Navigate after a short delay
+            // Navigate after a short delay to allow the transition effect
             setTimeout(() => {
                 window.location.href = href;
-            }, 300); // Reduced delay for faster navigation
+            }, 300);
         });
     });
     
