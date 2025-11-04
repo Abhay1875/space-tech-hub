@@ -47,3 +47,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Trigger initial check for elements in viewport
     window.dispatchEvent(new Event('scroll'));
 });
+
