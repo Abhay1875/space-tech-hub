@@ -19,15 +19,12 @@ function initEnhancedStarfield() {
     // Mouse position tracking for parallax effect
     let mouseX = 0;
     let mouseY = 0;
-    let scrollPosition = 0;
+    // Removed scroll tracking to prevent background movement during scroll
+    // let scrollPosition = 0; // Keep at 0 to prevent movement
     
     document.addEventListener('mousemove', (e) => {
         mouseX = (e.clientX / window.innerWidth) * 2 - 1;
         mouseY = (e.clientY / window.innerHeight) * 2 - 1;
-    });
-    
-    document.addEventListener('scroll', () => {
-        scrollPosition = window.scrollY;
     });
     
     // Create multiple layers of elements with different speeds
@@ -182,8 +179,8 @@ function initEnhancedStarfield() {
             );
             ctx.fill();
             
-            // Move star with scroll
-            star.y += star.speed + (scrollPosition * 0.001);
+            // Move star without scroll effect
+            star.y += star.speed;
             
             // Reset star if it goes off screen
             if (star.y > canvas.height) {
@@ -213,8 +210,8 @@ function initEnhancedStarfield() {
             );
             ctx.fill();
             
-            // Move star with scroll
-            star.y += star.speed + (scrollPosition * 0.001);
+            // Move star without scroll effect
+            star.y += star.speed;
             
             // Reset star if it goes off screen
             if (star.y > canvas.height) {
@@ -248,8 +245,8 @@ function initEnhancedStarfield() {
             );
             ctx.fill();
             
-            // Move star with scroll
-            star.y += star.speed + (scrollPosition * 0.002);
+            // Move star without scroll effect
+            star.y += star.speed;
             
             // Reset star if it goes off screen
             if (star.y > canvas.height) {
@@ -283,8 +280,8 @@ function initEnhancedStarfield() {
             );
             ctx.fill();
             
-            // Move star with scroll
-            star.y += star.speed + (scrollPosition * 0.003);
+            // Move star without scroll effect
+            star.y += star.speed;
             
             // Reset star if it goes off screen
             if (star.y > canvas.height) {
@@ -333,8 +330,8 @@ function initEnhancedStarfield() {
             );
             ctx.fill();
             
-            // Move nebula with scroll
-            nebula.y += nebula.speed + (scrollPosition * 0.004);
+            // Move nebula without scroll effect
+            nebula.y += nebula.speed;
             
             // Reset nebula if it goes off screen
             if (nebula.y > canvas.height + nebula.size) {
@@ -363,7 +360,7 @@ function initEnhancedStarfield() {
             if (ripple.alpha <= 0) {
                 ripples.splice(i, 1);
             }
-        }
+        };
         
         requestAnimationFrame(animate);
     }
